@@ -1,0 +1,46 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--              Write a code to find perimeter of rectangle.               -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+<!--                 Input: length = 5, width = 3 Output: 16                 -->
+<!-- ----------------------------------------------------------------------- -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Keliling Persegi Panjang</title>
+  </head>
+  <body>
+    <h1>Kalkulator Keliling Persegi Panjang</h1>
+
+    <input type="number" id="panjang" placeholder="Panjang" />
+    <input type="number" id="lebar" placeholder="Lebar" />
+    <button onclick="hitungKeliling()">Hitung Keliling</button>
+
+    <div id="hasil"></div>
+
+    <script>
+      function kelilingPersegiPanjang(panjang, lebar) {
+        return 2 * (panjang + lebar);
+      }
+
+      function hitungKeliling() {
+        // ambil nilai input
+        const panjang = parseFloat(document.getElementById("panjang").value);
+        const lebar = parseFloat(document.getElementById("lebar").value);
+
+        // Validasi
+        if (isNaN(panjang) || isNaN(lebar) || panjang <= 0 || lebar <= 0) {
+          document.getElementById("hasil").innerHTML =
+            '<span style="color: red;">Masukkan angka positif!</span>';
+          return;
+        }
+
+        // Hitung dan tampilkan
+        const hasil = kelilingPersegiPanjang(panjang, lebar);
+        document.getElementById("hasil").innerHTML =
+          `Keliling: <strong>${hasil}</strong>`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>areaPersegiPanjang</title>
+  </head>
+  <body>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                 Write a code to find area of rectangle.                 -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!--               Input: length = 5, width = 3    Output: 15                -->
+    <!-- ----------------------------------------------------------------------- -->
+    <h1>Menghitung area persegi panjang</h1>
+    <input type="number" id="panjang" placeholder="5" />
+    <input type="number" id="lebar" placeholder="3" />
+
+    <button onclick="hitungArea()">hitung</button>
+    <div id="hasil"></div>
+
+    <script src="format.js"></script>
+    <script>
+      function hitungArea() {
+        let panjang = document.getElementById("panjang").value;
+        let lebar = document.getElementById("lebar").value;
+
+        let hasil = areaPersegiPanjang(panjang, lebar);
+
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>
